@@ -24,7 +24,7 @@ export const TeamPage = () => {
 
 
       <MatchDetailCard match={team.matches[0]} />
-      {team.matches.slice(1).map(match => <MatchSmallCard match={match} />)}
+      {team.matches.map(match => <MatchSmallCard match={match} />)}
     </div>
   );
 }
