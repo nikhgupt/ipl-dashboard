@@ -1,6 +1,9 @@
 import { React } from 'react';
+import { Link } from 'react-router-dom';
 
-export const YearSelector = () => {
+import './YearSelector.scss';
+
+export const YearSelector = ({teamName}) => {
 
     let years = [];
     const startYear = process.env.REACT_APP_Data_START_YEAR;
@@ -11,7 +14,14 @@ export const YearSelector = () => {
     }
 
     return (
-        years.map(year => <h4>Test</h4>)
+        <ol className="YearSelector">
+            { years.map(year => (
+                <li>
+                    <Link to={`/teams/${teamName}/matches/${year}`}>{year}</Link> 
+                </li>
+            
+            ) )}
+        </ol>
     )
 
 }
