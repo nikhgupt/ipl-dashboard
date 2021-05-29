@@ -1,8 +1,4 @@
 import { React, useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
-import { MatchDetailCard } from '../components/MatchDetailCard';
-import { MatchSmallCard } from '../components/MatchSmallCard';
-import { PieChart } from 'react-minimal-pie-chart';
 
 
 import './HomePage.scss';
